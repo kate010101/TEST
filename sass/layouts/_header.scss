@@ -1,0 +1,42 @@
+
+/*Accueil*/
+.logo {
+
+    &__title {
+        & a {
+            @include liens;
+            display: block;
+        }
+    }    
+
+    &__ban {
+        display: flex;
+        justify-content: center;
+        box-shadow: $ban-shadow;
+        margin-bottom: 4px;
+    }
+
+    &__img {
+        width: 9.5rem;
+        margin: 10px;
+        padding-top: 10px;
+    }
+
+}
+
+/*Menus*/
+
+.logo {
+    &__ban2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+    }
+    &__fleche {
+        font-size: 19px;
+        position: absolute;
+        top: 23px;
+        left: 16px;
+        color: $back-clr-foot;
+    }
+}

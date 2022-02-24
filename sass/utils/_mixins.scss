@@ -1,0 +1,42 @@
+@mixin liens {
+    text-decoration: none;
+    display: block;
+}
+
+ @mixin icon {
+    font-size: 13px;
+    margin-right: 6px;
+    width: 17px;
+ }
+
+ @mixin ban-loc {
+    background: $back-clr-location;
+    color: $back-clr-foot;
+    display: flex;
+    justify-content: space-evenly;
+ }
+
+ @mixin intro-sect {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+ }
+
+ @mixin grostitres {
+    letter-spacing: -1px;
+    display: flex;
+ }
+
+ @mixin background {
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-radius: 20px 20px 0 0;
+   height: 70%;
+ }
+
+@mixin heart {
+   background: linear-gradient(5deg, #ff79da, #9356dc);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+}
+

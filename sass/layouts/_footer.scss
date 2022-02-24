@@ -1,0 +1,40 @@
+.footer {
+
+    &__logo {
+        &__clr {
+            filter: invert(1);
+            width: 6rem;
+            align-content: space-between;
+            padding-inline-start: 25px;
+            margin-bottom: 0px;
+            margin-top: 24px;
+        }
+        & a {
+            @include liens;
+            display: inline-block;
+        }
+    }
+
+    &__choice {
+        color: $back-clr;
+        background: $back-clr-foot;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__options {
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        padding-inline-start: 25px;
+        line-height: 25px;
+
+        & a {
+        color: $back-clr;
+        }
+
+        &--icon {
+            @include icon;
+            }
+    }
+}

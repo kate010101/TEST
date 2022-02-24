@@ -1,0 +1,24 @@
+{
+  "name": "p3_janovsky_lydie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:public/css/styles.css",
+    "prefix": "postcss ./public/css/styles.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kate010101/Janovsky_3_12092021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/kate010101/Janovsky_3_12092021/issues"
+  },
+  "homepage": "https://github.com/kate010101/Janovsky_3_12092021#readme",
+  "devDependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}

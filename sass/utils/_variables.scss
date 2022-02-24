@@ -1,0 +1,39 @@
+@use "sass:math";
+
+$box-shadow: 0px 8px 9px #ececec;
+
+$carte-shad: 1px 4px 6px 2px #ececec;
+
+$box-shad-btn: 0px 3px 8px #b0b0b0;
+
+$box-shad-after: 0px 3px 8px hsl(0, 0%, 52%);
+
+$ban-shadow: 0px 4px 4px rgb(207, 207, 207);
+
+$back-clr: #fff;
+
+$back-clr-location: rgb(234, 234, 234);
+
+$back-clr-intro: rgb(246, 246, 246);
+
+$back-clr-foot: #353535;
+
+$color-p: lighten($back-clr-foot, 25%);
+
+$color-primary: #9356DC;
+
+$color-secondary: #FF79DA;
+
+$color-tertiary: #99E2D0;
+
+$color-news: darken($color-tertiary, 38%);
+
+$color-hover: rgb(245, 237, 255);
+
+$color-heart: linear-gradient(174deg, #ff79da, #9356dc);
+
+$num-blocs: 11;
+
+$anim-dur: 1000ms;
+
+$anim-delay: math.div($anim-dur, $num-blocs);

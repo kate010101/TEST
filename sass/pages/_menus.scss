@@ -1,0 +1,224 @@
+main {
+    background: $back-clr-intro;
+}
+
+/*Présentation*/
+.prest {
+	& img {
+        width: 100%;
+        max-height: 280px;
+        object-fit: cover;
+    }
+}
+
+.menu {
+    background: $back-clr-intro;
+    border-radius: 35px 35px 0 0;
+    padding-top: 8px;
+    top: -53px;
+    position: relative;
+
+    &__titre {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+
+    & h1 {
+    font-family: "Shrikhand" , sans-serif;
+    font-size: 27px;
+    }
+}
+
+/*Menus*/
+.cartes {
+    margin-bottom: 25px;
+
+    &__titre {
+        text-transform: uppercase;
+        display: flex;
+        background: $back-clr-intro;
+
+        & h2 {
+            border-bottom: $color-tertiary solid 3px;
+            font-weight: lighter;
+            font-size: initial;
+            padding-bottom: 5px;
+            font-size: 15px;
+            color: $back-clr-foot;
+            margin-left: 15px;
+            width: 42px;
+        }
+    }
+}
+
+.carte {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 11px 0 11px;
+
+    &__bloc {
+    background: $back-clr;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: $carte-shad;
+    overflow: hidden;
+    margin-bottom: 13px;
+        &:hover {
+            .carte__prix {
+                animation: basis 500ms ease-in-out both;
+
+                &--check {
+                animation: checked 500ms ease-in-out forwards;
+                flex-basis: 25%;
+                    & i {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+        }
+        animation: blocs $anim-dur ease-in-out both;
+        @for $i from 1 to $num-blocs {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        padding: 11px 0px 8px 12px;
+        flex-basis: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        & h3 {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        & p {
+            color: $back-clr-foot;
+            font-size: 15px;
+            padding: 6px 0 4px 0px;
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+
+    &__prix {
+        display: flex;
+        font-weight: bold;
+        font-size: 15px;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0 0 9px 0;
+        flex-basis: 0%;
+
+        &--check {
+            display: flex;
+            font-size: 22px;
+            align-items: center;
+            padding: 0;
+            flex-basis: 0%;
+            background: $color-tertiary;
+            border-radius: 0 15px 15px 0;
+            transform: translateX(100%);
+
+            & i {
+                flex-basis: 100%;
+                display: flex;
+                justify-content: center;
+                filter: invert(1);
+                transform: rotate(-360deg);
+                transition: transform 500ms ease-in-out;
+            }
+        }
+    }
+}
+
+@keyframes checked {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes basis {
+    0% {
+        flex-basis: 0%;
+    }
+    100% {
+        flex-basis: 25%;
+    }
+}
+
+@keyframes blocs {
+    0% {
+        transform: translateY(70%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+/*Tablettes*/
+@media all and (min-width: 572px) and (max-width: 767px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu {
+        flex-basis: 100%;
+        &__titre {
+            justify-content: space-evenly;
+        }
+    }
+
+    .cartes {
+        flex-basis: 45%;
+    }
+
+    .btn {
+        flex-basis: 50%;
+        align-items: center;
+    }
+}
+
+/*Ordinateurs*/
+@media all and (min-width: 768px) {
+    .menu h1 {
+        flex-basis: 60%;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu {
+        flex-basis: 100%;
+    }    
+
+    .cartes {
+        flex-basis: 33%;
+    }
+
+    .btn {
+        flex-basis: 100%;
+    }
+}
